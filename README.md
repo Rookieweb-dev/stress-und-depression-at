@@ -27,3 +27,10 @@ Dann http://localhost:8787 öffnen. Das läuft genau wie später bei Cloudflare 
 Bis die Domain bei Cloudflare liegt, ist die Seite nach dem ersten Deploy unter
 `stress-und-depression-at.<konto>.workers.dev` erreichbar. Wenn die Domain bereit ist,
 in `wrangler.jsonc` die `routes`-Zeile einkommentieren und `workers_dev` auf `false` setzen.
+
+## Claude-Skills
+
+In `.claude/skills/` liegen Anleitungen, die Claude bei Design-Arbeit an der Seite automatisch lädt:
+
+- `frontend-design`: Anthropics offizieller Design-Skill (Apache 2.0, aus github.com/anthropics/skills).
+- `praxis-website`: Regeln speziell für diese Seite (Zielgruppen, Tonfall, Barrierefreiheit, CSP).
