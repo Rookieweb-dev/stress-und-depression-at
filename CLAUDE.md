@@ -14,5 +14,5 @@ No API key, token, password or other secret may ever appear in this repo or on t
 
 ## Hosting
 
-Cloudflare Worker with static assets (`wrangler.jsonc`), same setup as wortfinder.app.
+Cloudflare Worker with static assets (`wrangler.jsonc`).
 Cloudflare builds every push to `main` and deploys with `npx wrangler deploy`; pull requests get preview links.
