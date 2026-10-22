@@ -11,4 +11,19 @@ Derzeit gibt es keinen Build-Schritt: ausgeliefert wird der Ordner `public/`.
 Sobald ein Framework gewählt ist, `assets.directory` in `wrangler.jsonc` auf dessen Ausgabeordner (z. B. `./dist`) setzen
 und in Cloudflare den Build-Befehl eintragen.
 
-Lokal testen: `npx wrangler dev`
+## Lokal arbeiten
+
+Ohne Domain und ohne Cloudflare-Konto:
+
+```sh
+npx wrangler dev
+```
+
+Dann http://localhost:8787 öffnen. Das läuft genau wie später bei Cloudflare (inkl. `_headers` und 404-Seite);
+Änderungen in `public/` sind nach einem Neuladen sichtbar.
+
+## Domain
+
+Bis die Domain bei Cloudflare liegt, ist die Seite nach dem ersten Deploy unter
+`stress-und-depression-at.<konto>.workers.dev` erreichbar. Wenn die Domain bereit ist,
+in `wrangler.jsonc` die `routes`-Zeile einkommentieren und `workers_dev` auf `false` setzen.
