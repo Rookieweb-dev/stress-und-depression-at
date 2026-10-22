@@ -1,0 +1,13 @@
+# Security headers for every response (Cloudflare static assets read this file from the assets folder).
+# The CSP only allows the site's own files: no third-party scripts, no inline scripts.
+# Adding an external service (fonts, analytics, booking tool) means adding its origin here on purpose.
+# Cloudflare Web Analytics (cookieless, injected by Cloudflare): beacon script from static.cloudflareinsights.com, reports to cloudflareinsights.com.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=31536000
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
