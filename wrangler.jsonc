@@ -1,11 +1,11 @@
-// Cloudflare deploy config (same setup as wortfinder.app): a Worker that only serves static files.
+// Cloudflare deploy config: a Worker that only serves static files.
 // Cloudflare builds every push to main and runs `npx wrangler deploy`.
 {
   "$schema": "https://unpkg.com/wrangler/config-schema.json",
   "name": "stress-und-depression-at",
   "compatibility_date": "2026-10-01",
   // Until the domain is on Cloudflare the site lives at stress-und-depression-at.<account>.workers.dev.
-  // When the domain is ready: uncomment "routes" and set "workers_dev" to false (like wortfinder.app),
+  // When the domain is ready: uncomment "routes" and set "workers_dev" to false,
   // because the workers.dev subdomain is tied to the Cloudflare account, not the site.
   // "routes": [{ "pattern": "stress-und-depression.at", "custom_domain": true }],
   "workers_dev": true,
