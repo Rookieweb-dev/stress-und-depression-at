@@ -1,0 +1,9 @@
+node_modules
+dist
+.wrangler
+# Secrets never belong in the repo
+.env
+.env.*
+.dev.vars*
+*.pem
+*.key

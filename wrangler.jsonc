@@ -1,0 +1,21 @@
+// Cloudflare deploy config (same setup as wortfinder.app): a Worker that only serves static files.
+// Cloudflare builds every push to main and runs `npx wrangler deploy`.
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "stress-und-depression-at",
+  "compatibility_date": "2026-10-01",
+  // Serves the site on the domain (the zone must be in the same Cloudflare account).
+  "routes": [{ "pattern": "stress-und-depression.at", "custom_domain": true }],
+  // No *.workers.dev address: its subdomain is tied to the Cloudflare account, not the site.
+  "workers_dev": false,
+  "assets": {
+    // No build step yet. Once a framework is chosen, point this at its output folder (e.g. ./dist).
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  // Required by `wrangler preview`, which Cloudflare runs for pull request branches.
+  "previews": {},
+  // With a custom domain, preview links are off unless enabled here.
+  "preview_urls": true
+}

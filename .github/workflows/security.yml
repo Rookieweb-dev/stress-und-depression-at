@@ -1,0 +1,32 @@
+# Blocks secrets from reaching the repo: gitleaks scans the full git history on every push and pull request.
+
+name: Security
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '0 5 * * 1' # weekly, so new gitleaks rules also cover old commits
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    env:
+      GITLEAKS_VERSION: 8.28.0
+      GITLEAKS_SHA256: a65b5253807a68ac0cafa4414031fd740aeb55f54fb7e55f386acb52e6a840eb
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks (checksum-pinned)
+        run: |
+          curl -sSfL -o gitleaks.tgz "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          echo "${GITLEAKS_SHA256}  gitleaks.tgz" | sha256sum -c -
+          tar xzf gitleaks.tgz gitleaks
+      - name: Scan full history
+        run: ./gitleaks git . --no-banner --redact --verbose
+
