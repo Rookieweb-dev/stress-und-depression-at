@@ -14,8 +14,9 @@ prevention and depression for companies. Visitors are often stressed or unwell w
 - Two audiences: private clients (calm, reassurance, a clear next step) and HR / company
   contacts (credible, concrete workshop formats). Keep both paths obvious from the start page.
 - Language is German (Austrian usage, e.g. "Jänner"), `lang="de-AT"`. Address private clients with "Sie".
-- Quiet and trustworthy beats flashy: no autoplaying motion, no urgency tricks, no stock-photo clichés
-  (head-in-hands, wilting plants). Respect `prefers-reduced-motion`.
+- Quiet and trustworthy beats flashy: no urgency tricks, no stock-photo clichés
+  (head-in-hands, wilting plants). The only autoplaying motion is the hero scarf the owner asked for
+  (slow, looping, still under `prefers-reduced-motion`); add no other unprompted motion.
 - Do not invent qualifications, prices, testimonials or health claims. Ask for real content or
   mark placeholders clearly.
 

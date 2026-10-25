@@ -39,6 +39,7 @@
   --footer-muted: #b8c6bb;
   --placeholder-bg: #f6f0d9;
   --placeholder-fg: #5c4a12;
+  --scarf: #7a4fa3;
   --serif: "Literata", Georgia, serif;
   --sans: "Atkinson Hyperlegible Next", system-ui, sans-serif;
   --measure: 38rem;
@@ -61,6 +62,7 @@
     --footer-muted: #a9b8ac;
     --placeholder-bg: #3a331c;
     --placeholder-fg: #f0e3b4;
+    --scarf: #a67fd0;
   }
 }
 
@@ -154,14 +156,29 @@ a:hover { text-decoration-thickness: 2px; }
 .hero { padding-block: clamp(2.5rem, 7vw, 5.5rem) var(--section); overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 2rem; align-items: center; }
 .hero h1 { max-width: 13ch; }
-.hero-rings { width: 100%; max-width: 30rem; justify-self: end; overflow: visible; }
-.ring { fill: none; stroke: var(--sage); stroke-width: 1.4; }
-.ring-0, .ring-1, .ring-2 { stroke: var(--moss); }
-.ring-7, .ring-8, .ring-9 { stroke-width: 1; opacity: 0.75; }
-.ring-core { fill: var(--mist); }
+.hero-figure { width: 100%; max-width: 30rem; justify-self: end; overflow: visible; }
+.hero-figure .line { fill: none; stroke: var(--ink); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.hero-figure .coat { fill: var(--paper); }
+.hero-figure .thin { stroke-width: 1.6; }
+.hero-figure .ink { fill: var(--ink); }
+.hero-figure .hair-line { fill: none; stroke: var(--paper); stroke-width: 1.4; stroke-linecap: round; opacity: 0.55; }
+.hero-figure .ground { fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; }
+.hero-figure .wind path { stroke: var(--ink); opacity: 0.35; stroke-width: 1.6; stroke-linecap: round; stroke-dasharray: 60 140; }
+.hero-figure .scarf { fill: var(--scarf); }
+.hero-figure .scarf-still { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-figure .wind path { animation: wind 9s linear infinite; }
+  .hero-figure .wind path:nth-child(2) { animation-duration: 12s; animation-delay: -4s; }
+  .hero-figure .wind path:nth-child(3) { animation-duration: 10s; animation-delay: -7s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-figure .scarf-moving { display: none; }
+  .hero-figure .scarf-still { display: inline; }
+}
+@keyframes wind { from { stroke-dashoffset: 200; } to { stroke-dashoffset: 0; } }
 @media (max-width: 48rem) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-rings { grid-row: 1; justify-self: start; width: 9rem; margin-bottom: 0.5rem; }
+  .hero-figure { justify-self: center; max-width: 20rem; margin-top: 1rem; }
 }
 
 /* Two paths */
