@@ -28,6 +28,17 @@ Bis die Domain bei Cloudflare liegt, ist die Seite nach dem ersten Deploy unter
 `stress-und-depression-at.<konto>.workers.dev` erreichbar. Wenn die Domain bereit ist,
 in `wrangler.jsonc` die `routes`-Zeile einkommentieren und `workers_dev` auf `false` setzen.
 
+## Seiten (Demo)
+
+Reines HTML/CSS in `public/`, eine Datei pro Seite (`ueber-mich.html` ist unter `/ueber-mich` erreichbar).
+Kopf- und Fußzeile stehen in jeder Datei; bei Änderungen an Menü oder Notfall-Hinweis alle Seiten anpassen.
+
+- Schriften: Literata und Atkinson Hyperlegible Next, selbst gehostet in `public/fonts/` (SIL Open Font License).
+- `site.js`: Menü auf dem Handy und Kontaktformular.
+- Das Kontaktformular versendet noch nichts. Dafür braucht es einen Server-Teil (z. B. Worker-Route, die per E-Mail weiterleitet).
+- Gelb markierte Stellen sind Platzhalter (Foto, Texte, E-Mail, Telefon, Impressum, Datenschutz).
+- Die Krisennummern auf `/notfall` vor dem Livegang noch einmal prüfen.
+
 ## Claude-Skills
 
 In `.claude/skills/` liegen Anleitungen, die Claude bei Design-Arbeit an der Seite automatisch lädt:

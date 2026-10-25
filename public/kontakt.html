@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt | Magdalena Lischka-Schwarz, Klinische Psychologin</title>
+  <meta name="description" content="Termin oder Workshop bei Magdalena Lischka-Schwarz anfragen, über das Formular, per E-Mail oder telefonisch.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#eef2ec">
+  <link rel="preload" href="/fonts/literata.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/site.js"></script>
+</head>
+<body>
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="wordmark" href="/">
+        <span class="wordmark-name">Magdalena Lischka-Schwarz</span>
+        <span class="wordmark-role">Klinische Psychologin, MSc</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
+      <nav class="site-nav" id="hauptmenue" aria-label="Hauptmenü">
+        <ul>
+        <li><a href="/beratung-behandlung">Beratung &amp; Behandlung</a></li>
+        <li><a href="/workshops">Workshops für Unternehmen</a></li>
+        <li><a href="/ueber-mich">Über mich</a></li>
+        <li><a href="/kontakt" aria-current="page">Kontakt</a></li>
+          <li><a class="nav-notfall" href="/notfall">Hilfe im Notfall</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="inhalt">
+
+    <section class="page-intro">
+      <div class="wrap">
+        <h1>Kontakt</h1>
+        <p class="lead">Schreiben Sie mir kurz, worum es geht. Ich melde mich bei Ihnen, um alles Weitere zu besprechen.</p>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="wrap contact-grid">
+        <form class="contact-form" action="/kontakt" method="post" novalidate>
+          <fieldset class="choice">
+            <legend>Ihr Anliegen</legend>
+            <label><input type="radio" name="anliegen" value="privat" checked> Beratung oder Behandlung für mich</label>
+            <label><input type="radio" name="anliegen" value="unternehmen"> Workshop oder Seminar für ein Unternehmen</label>
+          </fieldset>
+
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field company-only">
+            <label for="firma">Unternehmen <span class="optional">(optional)</span></label>
+            <input id="firma" name="firma" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="telefon">Telefon <span class="optional">(optional)</span></label>
+            <input id="telefon" name="telefon" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="nachricht">Nachricht</label>
+            <p class="hint" id="nachricht-hinweis">Ein paar Sätze genügen. Ausführliche Angaben zu Ihrer Gesundheit besprechen wir lieber im Gespräch.</p>
+            <textarea id="nachricht" name="nachricht" rows="6" aria-describedby="nachricht-hinweis" required></textarea>
+          </div>
+          <div class="field field-check">
+            <input id="datenschutz" name="datenschutz" type="checkbox" required>
+            <label for="datenschutz">Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage verwendet werden.</label>
+          </div>
+          <button class="button" type="submit">Anfrage senden</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <aside class="contact-aside">
+          <h2>Direkt erreichen</h2>
+          <dl class="contact-direct">
+            <dt>E-Mail</dt>
+            <dd><span class="placeholder">E-Mail-Adresse folgt</span></dd>
+            <dt>Telefon</dt>
+            <dd><span class="placeholder">Telefonnummer folgt</span></dd>
+          </dl>
+          <div class="aside-note">
+            <h3>Kurz zur Orientierung</h3>
+            <ul>
+              <li>Termine finden online über Jitsi Meet statt.</li>
+              <li>120&nbsp;€ pro Einheit, Kostenzuschuss der Krankenkasse möglich.</li>
+              <li>Fragen Sie gerne nach einem Platz zum Sozialtarif.</li>
+            </ul>
+          </div>
+          <p class="aside-crisis">In einer akuten Krise warten Sie bitte nicht auf eine Antwort. <a href="/notfall">Hier finden Sie sofort Hilfe.</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <section class="crisis" aria-labelledby="krise-titel">
+        <h2 id="krise-titel">In einer akuten Krise</h2>
+        <p>Online-Termine sind für akute Notfälle nicht geeignet. Wenn Sie an Suizid denken oder sich selbst nicht mehr sicher fühlen, holen Sie sich bitte sofort Hilfe:</p>
+        <ul class="crisis-list">
+          <li><a href="tel:144"><strong>144</strong></a> Rettung</li>
+          <li><a href="tel:142"><strong>142</strong></a> Telefonseelsorge, rund um die Uhr, kostenlos</li>
+          <li><a href="tel:+43131330"><strong>01 31330</strong></a> Psychiatrische Soforthilfe Wien, rund um die Uhr</li>
+        </ul>
+        <p><a href="/notfall">Alle Notrufnummern und Anlaufstellen</a></p>
+      </section>
+      <div class="footer-meta">
+        <p class="footer-name">Magdalena Lischka-Schwarz, MSc<br>Klinische Psychologin in Wien</p>
+        <ul class="footer-links">
+          <li><a href="/kontakt">Kontakt</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+          <li><a href="/datenschutz">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
